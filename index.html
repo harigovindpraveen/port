@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harigovind P | Senior Frontend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --background: #F9F9F9;
+        --foreground: #000000;
+        --accent: #FF8C00;
+        --border-color: #000000;
+      }
+      html {
+        scroll-padding-top: 80px; /* Offset for sticky header */
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background-color: var(--background);
+        color: var(--foreground);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+      }
+      .brutalist-border {
+        border: 2px solid var(--border-color);
+      }
+      .brutalist-shadow {
+         box-shadow: 4px 4px 0px 0px var(--border-color);
+      }
+      .brutalist-shadow-sm {
+         box-shadow: 2px 2px 0px 0px var(--border-color);
+      }
+      .brutalist-shadow-lg {
+         box-shadow: 8px 8px 0px 0px var(--border-color);
+      }
+      .brutalist-button {
+        border: 2px solid var(--border-color);
+        box-shadow: 2px 2px 0px 0px var(--border-color);
+        transition: all 0.1s ease-in-out;
+      }
+      .brutalist-button:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0px 0px var(--border-color);
+      }
+       .brutalist-button:active {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0px 0px var(--border-color);
+      }
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Typing animation */
+      .typing-cursor {
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: var(--accent); }
+      }
+      /* Staggered animation for skills */
+      .stagger-in > * {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fade-in-up 0.5s forwards;
+      }
+      @keyframes fade-in-up {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      /* Pulse animation for contact button */
+      .pulse-button {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); box-shadow: 2px 2px 0px 0px var(--border-color); }
+        50% { transform: scale(1.02); box-shadow: 4px 4px 0px 0px var(--border-color); }
+        100% { transform: scale(1); box-shadow: 2px 2px 0px 0px var(--border-color); }
+      }
+      /* Vertical timeline */
+      .timeline-item {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .timeline-item.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      /* Modal Animation */
+      @keyframes fade-in-backdrop {
+        from { background-color: rgba(0,0,0,0); }
+        to { background-color: rgba(0,0,0,0.7); }
+      }
+      @keyframes slide-in-up {
+        from { transform: translateY(30px) scale(0.98); opacity: 0; }
+        to { transform: translateY(0) scale(1); opacity: 1; }
+      }
+      .modal-backdrop-animate {
+        animation: fade-in-backdrop 0.2s ease-out forwards;
+      }
+      .modal-content-animate {
+        animation: slide-in-up 0.3s ease-out forwards;
+      }
+      /* Floating Shapes Animation */
+      @keyframes float-1 {
+        0% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); }
+        50% { transform: translateY(-40px) translateX(30px) rotate(180deg) scale(1.1); }
+        100% { transform: translateY(0px) translateX(0px) rotate(360deg) scale(1); }
+      }
+      @keyframes float-2 {
+        0% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); }
+        50% { transform: translateY(30px) translateX(-40px) rotate(-180deg) scale(0.9); }
+        100% { transform: translateY(0px) translateX(0px) rotate(-360deg) scale(1); }
+      }
+      @keyframes float-3 {
+        0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+        50% { transform: translateY(-35px) translateX(-35px) rotate(90deg); }
+        100% { transform: translateY(0px) translateX(0px) rotate(180deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-stone-100 text-black">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
